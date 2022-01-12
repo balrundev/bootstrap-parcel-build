@@ -14,12 +14,6 @@ jobs:
           node-version: '15.x'
       - run: npm install
       - run: npm run build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
